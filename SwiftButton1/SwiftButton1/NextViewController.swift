@@ -6,7 +6,7 @@
 //  Copyright © 2016年 KatoTakashi. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class NextViewController: UIViewController {
 

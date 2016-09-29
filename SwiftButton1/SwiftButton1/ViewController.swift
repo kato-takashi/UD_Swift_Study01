@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //count変数の中に5が入っています
+    var count = 5
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        count = 10
+        print(count)
     }
 
     override func didReceiveMemoryWarning() {
