@@ -46,6 +46,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cNR-wF-Z7z">
                                 <rect key="frame" x="115" y="220" width="128" height="128"/>
                                 <state key="normal" image="key.png"/>
+                                <connections>
+                                    <action selector="change:" destination="6ey-gC-Gbm" eventType="touchUpInside" id="lKp-Ub-I5w"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次の画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zds-sF-dKi">
                                 <rect key="frame" x="5" y="80" width="320" height="47"/>
@@ -57,6 +60,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.42400217986951094" blue="0.54874460003311953" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="Zds-sF-dKi" id="kkX-kK-utl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUl-PB-utc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
