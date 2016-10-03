@@ -38,7 +38,7 @@
         <!--Next View Controller-->
         <scene sceneID="FUl-ZI-0ze">
             <objects>
-                <viewController id="6ey-gC-Gbm" customClass="NextViewController" customModule="SwiftButton1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="6ey-gC-Gbm" customClass="NextViewController" customModule="SwiftButton1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gxs-iI-ZwD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

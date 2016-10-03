@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     //count変数の中に5が入っています
     var count = 5
+    var moji = "あいうえお"
 
     override func viewDidLoad() {
         super.viewDidLoad()
