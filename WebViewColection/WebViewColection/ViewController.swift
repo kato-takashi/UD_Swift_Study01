@@ -19,6 +19,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         let url:NSURL = NSURL( string: "http://www.google.co.jp" )!
         let urlRequest: NSURLRequest = NSURLRequest(URL: url)
         webView.loadRequest(urlRequest)
+        
+        //くるくるを非表示
+        kurukuru.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +30,26 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
+        //くるくるを表示
+        kurukuru.hidden = false
         //読み込み　開始
         kurukuru.startAnimating()
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
+        kurukuru.hidden = true
         //読み込み　終了
         kurukuru.stopAnimating()
     }
     
+    @IBAction func nextAction(sender: AnyObject) {
+        webView.goForward()
+    }
     
+    @IBAction func returnAction(sender: AnyObject) {
+        webView.goBack()
+    
+    }
 
 
 }
