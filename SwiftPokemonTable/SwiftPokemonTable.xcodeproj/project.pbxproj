@@ -16,6 +16,7 @@
 		204202251DC34E4800F433CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204202231DC34E4800F433CD /* Main.storyboard */; };
 		204202271DC34E4800F433CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204202261DC34E4800F433CD /* Assets.xcassets */; };
 		2042022A1DC34E4800F433CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204202281DC34E4800F433CD /* LaunchScreen.storyboard */; };
+		20494DE41DC6BA1A0014CB60 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494DE31DC6BA1A0014CB60 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		204202261DC34E4800F433CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204202291DC34E4800F433CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2042022B1DC34E4800F433CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20494DE31DC6BA1A0014CB60 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				2042021F1DC34E4800F433CD /* AppDelegate.swift */,
 				2021853F1DC5B3AD0092C82C /* TOPTableViewController.swift */,
 				202185471DC5B6960092C82C /* NextViewController.swift */,
+				20494DE31DC6BA1A0014CB60 /* WebViewController.swift */,
 				204202231DC34E4800F433CD /* Main.storyboard */,
 				204202261DC34E4800F433CD /* Assets.xcassets */,
 				204202281DC34E4800F433CD /* LaunchScreen.storyboard */,
@@ -103,7 +106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = KatoTakashi;
 				TargetAttributes = {
 					2042021B1DC34E4700F433CD = {
@@ -154,6 +157,7 @@
 				204202201DC34E4800F433CD /* AppDelegate.swift in Sources */,
 				202185481DC5B6960092C82C /* NextViewController.swift in Sources */,
 				202185401DC5B3AD0092C82C /* TOPTableViewController.swift in Sources */,
+				20494DE41DC6BA1A0014CB60 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +201,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -246,6 +251,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

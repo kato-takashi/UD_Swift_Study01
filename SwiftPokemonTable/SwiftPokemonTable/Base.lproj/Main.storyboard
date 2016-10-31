@@ -22,18 +22,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pzv-4Z-R08" id="SUQ-eg-qhA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TOT-cI-s5c">
-                                            <rect key="frame" x="15" y="47" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="48" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cxo-gt-1SZ">
-                                            <rect key="frame" x="15" y="68" width="44" height="15"/>
+                                            <rect key="frame" x="15" y="68.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -50,7 +50,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="hol-7y-5mt"/>
                     <connections>
-                        <segue destination="8v8-az-5PT" kind="push" identifier="next" id="Cn9-hW-49A"/>
+                        <segue destination="8v8-az-5PT" kind="push" identifier="" id="Cn9-hW-49A"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ton-oq-wv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,7 +60,7 @@
         <!--Next View Controller-->
         <scene sceneID="W8e-IU-mgx">
             <objects>
-                <viewController id="8v8-az-5PT" customClass="NextViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8v8-az-5PT" customClass="NextViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b8N-9K-kfA"/>
                         <viewControllerLayoutGuide type="bottom" id="it3-x0-7a2"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="2085.5999999999999" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="4lS-MD-Bgb">
             <objects>
-                <viewController id="QqF-du-Yqo" sceneMemberID="viewController">
+                <viewController id="QqF-du-Yqo" customClass="WebViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DtV-QW-5hV"/>
                         <viewControllerLayoutGuide type="bottom" id="3Od-kL-Vum"/>
@@ -108,12 +108,33 @@
                     <view key="view" contentMode="scaleToFill" id="NQw-OA-RNb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tl2-mx-WtD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="戻る" id="dyu-C7-YF7">
+                                        <connections>
+                                            <action selector="back:" destination="QqF-du-Yqo" id="Y8N-9n-p8A"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVZ-sV-b02">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="eVZ-sV-b02" id="wr5-Vq-taT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7v-aE-pn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2807" y="125"/>
+            <point key="canvasLocation" x="2805.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ji4-2b-LA7">

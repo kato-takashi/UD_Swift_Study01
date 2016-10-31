@@ -16,12 +16,12 @@ class ViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
-        let url:NSURL = NSURL( string: "http://www.google.co.jp" )!
-        let urlRequest: NSURLRequest = NSURLRequest(URL: url)
+        let url:URL = URL( string: "http://www.google.co.jp" )!
+        let urlRequest: URLRequest = URLRequest(url: url)
         webView.loadRequest(urlRequest)
         
         //くるくるを非表示
-        kurukuru.hidden = true
+        kurukuru.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,24 +29,24 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         //くるくるを表示
-        kurukuru.hidden = false
+        kurukuru.isHidden = false
         //読み込み　開始
         kurukuru.startAnimating()
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        kurukuru.hidden = true
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        kurukuru.isHidden = true
         //読み込み　終了
         kurukuru.stopAnimating()
     }
     
-    @IBAction func nextAction(sender: AnyObject) {
+    @IBAction func nextAction(_ sender: AnyObject) {
         webView.goForward()
     }
     
-    @IBAction func returnAction(sender: AnyObject) {
+    @IBAction func returnAction(_ sender: AnyObject) {
         webView.goBack()
     
     }

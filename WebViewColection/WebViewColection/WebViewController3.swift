@@ -8,26 +8,26 @@ class WebViewController3: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
-        let url:NSURL = NSURL( string: "https://www.udemy.com/courses/" )!
-        let urlRequest: NSURLRequest = NSURLRequest(URL: url)
+        let url:URL = URL( string: "https://www.udemy.com/courses/" )!
+        let urlRequest: URLRequest = URLRequest(url: url)
         webView.loadRequest(urlRequest)
         //くるくるを非表示
-        kurukuru.hidden = true
+        kurukuru.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         //くるくるを表示
-        kurukuru.hidden = false
+        kurukuru.isHidden = false
         //読み込み　開始
         kurukuru.startAnimating()
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        kurukuru.hidden = true
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        kurukuru.isHidden = true
         //読み込み　終了
         kurukuru.stopAnimating()
     }
