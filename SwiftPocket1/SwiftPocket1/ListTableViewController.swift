@@ -26,6 +26,21 @@ class ListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {        
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.object(forKey: "title") != nil{
+            titleArray = UserDefaults.standard.object(forKey: "titleArray") as! [String]
+            urlArray = UserDefaults.standard.object(forKey: "urlArray") as! [String]
+            
+        }
+        tableView.reloadData()
+
+        
         //サイズを決定
         webview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         let requestURL = URL(string: "https://www.google.co.jp")
@@ -34,21 +49,34 @@ class ListTableViewController: UITableViewController {
         
         //viewにaddする
         self.view.addSubview(webview)
-        
         //webviewを非表示
         webview.isHidden = true
-
     }
     
-    @IBAction func add(_ sender: Any) {
+    @IBAction func search(_ sender: Any) {
+        //サイズを決定
+        webview.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        let requestURL = URL(string: "https://www.google.co.jp")
+        let req = NSURLRequest(url:requestURL!)
+        webview.loadRequest(req as URLRequest)
+        
+        //viewにaddする
+        self.view.addSubview(webview)
         //webviewを表示
         webview.isHidden = false
+    }
+    
+    
+
+    @IBAction func add(_ sender: Any) {
+        //webviewを表示
+        webview.isHidden = true
         
         //webviewに表示されているタイトルを配列の中に入れる
         titleArray.append(webview.stringByEvaluatingJavaScript(from: "document.title")!)
         
         //webviewに表示されているURLを配列の中に入れる
-        urlArray.append(webview.stringByEvaluatingJavaScript(from: "document.url")!)
+        urlArray.append(webview.stringByEvaluatingJavaScript(from: "document.URL")!)
         
         //配列をアプリ内へ保存する
         UserDefaults.standard.set(titleArray, forKey: "titleArray")

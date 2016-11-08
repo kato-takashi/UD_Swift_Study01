@@ -11,9 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     var count:Int = 0
     
+    @IBOutlet var webview: UIWebView!
+    var urlArray = [String]()
+    var urlString:String? = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if UserDefaults.standard.object(forKey: "urlArray") != nil{
+            urlArray = UserDefaults.standard.object(forKey: "urlArray") as! [String]
+            urlString = urlArray[count]
+        }
+        
+        let requestURL = URL(string: urlString!)
+        let req = NSURLRequest(url:requestURL!)
+        webview.loadRequest(req as URLRequest)
     }
 
     override func didReceiveMemoryWarning() {
