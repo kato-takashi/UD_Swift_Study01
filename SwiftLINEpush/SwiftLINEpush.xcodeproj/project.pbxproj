@@ -15,6 +15,7 @@
 		20B428581DD292F300F83BD4 /* human.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B428551DD292F300F83BD4 /* human.png */; };
 		20B428591DD292F300F83BD4 /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B428561DD292F300F83BD4 /* push.png */; };
 		20B4285A1DD292F300F83BD4 /* write.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B428571DD292F300F83BD4 /* write.png */; };
+		F982166684F1102CCF8821DB /* Pods_SwiftLINEpush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F23406815D50F9306DCA09 /* Pods_SwiftLINEpush.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		20B428551DD292F300F83BD4 /* human.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human.png; sourceTree = "<group>"; };
 		20B428561DD292F300F83BD4 /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
 		20B428571DD292F300F83BD4 /* write.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write.png; sourceTree = "<group>"; };
+		4FA605AA7950772C208875D9 /* Pods-SwiftLINEpush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLINEpush.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLINEpush/Pods-SwiftLINEpush.release.xcconfig"; sourceTree = "<group>"; };
+		53268A28E3DAB682063AE6D3 /* Pods-SwiftLINEpush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLINEpush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLINEpush/Pods-SwiftLINEpush.debug.xcconfig"; sourceTree = "<group>"; };
+		C7F23406815D50F9306DCA09 /* Pods_SwiftLINEpush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLINEpush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F982166684F1102CCF8821DB /* Pods_SwiftLINEpush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E3D1B8D82E169A5ED6ACC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53268A28E3DAB682063AE6D3 /* Pods-SwiftLINEpush.debug.xcconfig */,
+				4FA605AA7950772C208875D9 /* Pods-SwiftLINEpush.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		20B428371DD291E800F83BD4 = {
 			isa = PBXGroup;
 			children = (
 				20B428421DD291E800F83BD4 /* SwiftLINEpush */,
 				20B428411DD291E800F83BD4 /* Products */,
+				05E3D1B8D82E169A5ED6ACC8 /* Pods */,
+				31CCD476424C70931DAF44A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,14 @@
 			path = SwiftLINEpush;
 			sourceTree = "<group>";
 		};
+		31CCD476424C70931DAF44A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7F23406815D50F9306DCA09 /* Pods_SwiftLINEpush.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20B428521DD291E800F83BD4 /* Build configuration list for PBXNativeTarget "SwiftLINEpush" */;
 			buildPhases = (
+				A80D162596918D966C3782B4 /* [CP] Check Pods Manifest.lock */,
 				20B4283C1DD291E800F83BD4 /* Sources */,
 				20B4283D1DD291E800F83BD4 /* Frameworks */,
 				20B4283E1DD291E800F83BD4 /* Resources */,
+				DF1DC1A303067C7102E02BCC /* [CP] Embed Pods Frameworks */,
+				9B6D05195A62700D3EE2A8C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B6D05195A62700D3EE2A8C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftLINEpush/Pods-SwiftLINEpush-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A80D162596918D966C3782B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1DC1A303067C7102E02BCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftLINEpush/Pods-SwiftLINEpush-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20B4283C1DD291E800F83BD4 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		20B428531DD291E800F83BD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53268A28E3DAB682063AE6D3 /* Pods-SwiftLINEpush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftLINEpush/Info.plist;
@@ -280,6 +356,7 @@
 		};
 		20B428541DD291E800F83BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA605AA7950772C208875D9 /* Pods-SwiftLINEpush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftLINEpush/Info.plist;

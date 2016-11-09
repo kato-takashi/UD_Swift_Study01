@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import AURCherryBlossomView
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,9 +17,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var honbunTextField: UITextField!
     var resultString = ""
     var ketsugouString = ":"
+    @IBOutlet var backView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let cherryBlossomView = AURCherryBlossomView(frame: self.view.bounds)
+        backView.addSubview(cherryBlossomView)
+        cherryBlossomView.birthRate = 4.0
+        
+        cherryBlossomView.type = .plum
+        cherryBlossomView.startBlossom()
+        
+        
         whoTextfield.delegate = self
         honbunTextField.delegate = self
     }
